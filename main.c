@@ -17,33 +17,46 @@ int main()
         if (code == 1)
         {
             int cun;
-            scanf("%d", &cun);
-            char x;
-            scanf("%d", &cun);
-            qian += cun;
             printf("jinrucunqiangongneng:\n");
+            scanf("%d", &cun);
+
+            qian += cun;
             printf("cunqianchenggong，anhuichejixu");
+            char x;
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
         if (code == 2)
         {
-            int qu;
-            char x;
             printf("jinruquqiangongneng,qingshurujine\n");
-            scanf("%d",&qu);
-            qian -= qu;
-            printf("quqianchenggong，anhuichejixu");
-            scanf("%c", &x);
-            scanf("%c", &x);
+            int qu;
+            scanf("%d", &qu);
+            if (qian < qu)
+            {
+                printf("yuebuzu,quqianshibai,dianjihuichetuichu\n");
+                char x;
+                scanf("%c", &x);
+                scanf("%c", &x);
+            }
+            else
+            {
+                qian -= qu;
+                printf("quqianchenggong，anhuichejixu");
+                char x;
+                scanf("%c", &x);
+                scanf("%c", &x);
+            }
         }
         if (code == 3)
         {
             printf("yu e :\n");
-            printf("%d", qian);
+            printf("%d,dianjihuichejixu\n", qian);
             char x;
             scanf("%c", &x);
             scanf("%c", &x);
         }
-        if(code == 4){
+        if (code == 4)
+        {
             printf("chuiche jx\n");
             break;
         }
