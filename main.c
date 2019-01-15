@@ -1,64 +1,68 @@
+
+
 #include <stdio.h>
 
-int main()
+void main()
 {
     int qian = 0;
-    printf("jinruqianbaoguanlixitong\n");
+    printf("jinrucunquqianguanlixitong\n");
     while (1)
     {
-        printf("1--cunqian\n");
-        printf("2--quqian\n");
-        printf("3--yue\n");
-        printf("4--yuichu\n");
-
-        int code;
-        printf("qingshuruxiangyinggongnengbianhao:\n");
-        scanf("%d", &code);
-        if (code == 1)
+        int a = 0;
+        printf("1---cunqian\n");
+        printf("2---quqain\n");
+        printf("3---yue\n");
+        printf("4---tuichu\n");
+        printf("qingshurugongnengbianhao：\n");
+        scanf("%d", &a);
+        if (a == 1)
         {
             int cun;
-            printf("jinrucunqiangongneng:\n");
-            scanf("%d", &cun);
-
-            qian += cun;
-            printf("cunqianchenggong，anhuichejixu");
             char x;
+            printf("jinrucunqiangongneng,qingshuruyaocunrudejine：\n");
+            scanf("%d", &cun);
+            qian += cun;
+            printf("cunruchenggong,dianjihuichejixu\n");
             scanf("%c", &x);
             scanf("%c", &x);
         }
-        if (code == 2)
+
+        if (a == 2)
         {
-            printf("jinruquqiangongneng,qingshurujine\n");
             int qu;
+            char x;
+            printf("jinruquqiangongneng，qingshuruyaoquchudejine\n");
             scanf("%d", &qu);
-            if (qian < qu)
-            {
-                printf("yuebuzu,quqianshibai,dianjihuichetuichu\n");
-                char x;
-                scanf("%c", &x);
-                scanf("%c", &x);
-            }
-            else
+
+            if (qian >= qu)
             {
                 qian -= qu;
-                printf("quqianchenggong，anhuichejixu");
-                char x;
+                printf("quqianchenggong，dianjihuichejixu\n");
+                scanf("%c", &x);
+                scanf("%c", &x);
+            }
+            else if (qian < qu)
+            {
+                printf("yuebuzu，quqianshibai，dianjihuichejixu\n");
                 scanf("%c", &x);
                 scanf("%c", &x);
             }
         }
-        if (code == 3)
+
+        if (a == 3)
         {
-            printf("yu e :\n");
-            printf("%d,dianjihuichejixu\n", qian);
             char x;
+            printf("dangqianyuewei%d\n", qian);
+            printf("dianjihuichejixu\n");
             scanf("%c", &x);
             scanf("%c", &x);
         }
-        if (code == 4)
+
+        if (a == 4)
         {
-            printf("chuiche jx\n");
+            printf("chengxujieshu\n");
             break;
         }
     }
+    return 0;
 }
